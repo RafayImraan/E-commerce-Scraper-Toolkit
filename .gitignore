@@ -5,3 +5,5 @@ venv/
 *.py[cod]
 output/
 .env
+/business/
+sample_output/portfolio_screenshots/generate.py

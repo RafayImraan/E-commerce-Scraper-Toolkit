@@ -54,6 +54,18 @@ Live runs performed on 2026-11-05:
 
 Offline-only checks use saved Books to Scrape HTML and Shopify product JSON fixtures, and mocks for de-duplication, CSV/JSON export, retry policy, and robots.txt. Shopify currency fallback, tag formatting, and availability calculations are tested offline. The full pytest suite passed with 18 tests after the Shopify run above.
 
+## Portfolio visuals
+
+The following cards summarize the toolkit and its recorded demo runs. The thumbnail is an illustrative project graphic; the sample result card shows the saved demo output.
+
+![E-commerce Scraper Toolkit project overview](sample_output/portfolio_screenshots/01-project-overview.png)
+
+![Recorded live demo results](sample_output/portfolio_screenshots/02-live-sample-results.png)
+
+![CLI command and offline verification summary](sample_output/portfolio_screenshots/03-cli-and-quality.png)
+
+![Illustrative E-commerce Scraper Toolkit thumbnail](sample_output/portfolio_screenshots/ecommerce-scraper-toolkit-thumbnail.png)
+
 ## Responsible use
 
 Use public data only. Respect each site's robots.txt, terms, rate limits, and applicable laws. Do not collect login-gated or personal data. The demo targets are intended for practice; check permission before using this toolkit against other sites.
