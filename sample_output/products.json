@@ -1,0 +1,26 @@
+[
+  {
+    "title": "MeMo PAD FHD 10",
+    "price": 320.99,
+    "currency": "USD",
+    "description": "White, 10.1\" IPS, 1.6GHz, 2GB, 16GB, Android 4.2",
+    "rating_reviews": "7 reviews",
+    "product_url": "https://webscraper.io/test-sites/e-commerce/more/product/25"
+  },
+  {
+    "title": "Dell Latitude 5480",
+    "price": 1310.39,
+    "currency": "USD",
+    "description": "Dell Latitude 5480, 14\" FHD, Core i7-7600U, 8GB, 256GB SSD, Windows 10 Pro",
+    "rating_reviews": "8 reviews",
+    "product_url": "https://webscraper.io/test-sites/e-commerce/more/product/136"
+  },
+  {
+    "title": "Acer Predator Helios 300 (PH317-51)",
+    "price": 1221.58,
+    "currency": "USD",
+    "description": "Acer Predator Helios 300 (PH317-51), 17.3\" FHD IPS, Core i7-7700HQ, 8GB, 1TB + 128GB SSD, GeForce GTX 1050 Ti 4GB, Windows 10 Home",
+    "rating_reviews": "9 reviews",
+    "product_url": "https://webscraper.io/test-sites/e-commerce/more/product/126"
+  }
+]

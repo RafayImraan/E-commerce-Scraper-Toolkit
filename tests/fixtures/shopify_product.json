@@ -1,0 +1,1 @@
+{"id": 42, "title": "Demo Tee", "vendor": "Demo Brand", "product_type": "Shirt", "handle": "demo-tee", "tags": ["cotton", "demo"], "variants": [{"price": "18.00", "available": false}, {"price": "15.50", "available": true}], "images": [{"src": "https://cdn.example/image.jpg"}]}
