@@ -1,4 +1,4 @@
-# ecom-scraper-toolkit
+# E-commerce Scraper Toolkit
 
 A small Python CLI for collecting public product data from static catalogs, JavaScript-rendered demo pages, and Shopify's public product endpoint. It exports product records to CSV or JSON.
 
