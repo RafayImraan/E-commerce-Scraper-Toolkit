@@ -41,7 +41,7 @@ Tipping the Velvet,53.74,GBP,In stock,One,https://books.toscrape.com/catalogue/t
 
 ## How it works / design notes
 
-`BaseScraper` centralizes pacing, user-agent configuration, and robots checks. The requests client configures bounded exponential retries for transient HTTP and network failures. Static pages are parsed with BeautifulSoup; dynamic pages are rendered in headless Chromium and the browser is closed in a `finally` block. Shopify products are read from the supplied store's public `/products.json` endpoint. Parsing, normalization, export, and robots behavior have offline tests.
+`BaseScraper` centralizes pacing, user-agent configuration, and robots checks. The requests client configures bounded exponential retries for transient HTTP and network failures. Static pages are parsed with BeautifulSoup; dynamic pages are rendered in headless Chromium and use element/navigation conditions to wait for results. Configured pacing is applied between browser-triggered requests, and the browser is closed in a `finally` block. Shopify products are read from the supplied store's public `/products.json` endpoint. Parsing, normalization, export, and robots behavior have offline tests.
 
 ## Tested on
 

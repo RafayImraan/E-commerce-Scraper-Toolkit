@@ -14,7 +14,11 @@ class ScraperConfig:
     delay: float = 1.0
     timeout: float = 20.0
     retries: int = 3
-    user_agent: str = "EcomScraperToolkit/1.0 (+https://example.com; educational public-data scraper)"
+    user_agent: str = (
+        "EcomScraperToolkit/1.0 "
+        "(+https://github.com/RafayImraan/E-commerce-Scraper-Toolkit; "
+        "educational public-data scraper)"
+    )
 
 
 class BaseScraper:

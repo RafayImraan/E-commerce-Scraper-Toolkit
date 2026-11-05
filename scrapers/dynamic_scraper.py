@@ -37,6 +37,7 @@ class DynamicScraper(BaseScraper):
                     page.goto(self.quotes_url, wait_until="domcontentloaded", timeout=int(self.config.timeout * 1000))
                     page.locator(".quote").first.wait_for(state="visible", timeout=int(self.config.timeout * 1000))
                     self.logger.info("JavaScript rendering demo loaded (%d quotes)", page.locator(".quote").count())
+                    self.pace()
                     page.goto(self.catalog_url, wait_until="domcontentloaded", timeout=int(self.config.timeout * 1000))
                     cards = page.locator(".thumbnail")
                     cards.first.wait_for(state="visible", timeout=int(self.config.timeout * 1000))
@@ -58,24 +59,22 @@ class DynamicScraper(BaseScraper):
                         more = page.get_by_text(re.compile(r"load more", re.I))
                         if more.count() and more.first.is_visible() and more.first.is_enabled():
                             before = len(seen)
+                            self.pace()
                             more.first.click()
                             try:
                                 page.wait_for_function("(n) => document.querySelectorAll('.thumbnail').length > n", before,
                                                        timeout=int(self.config.timeout * 1000))
                             except PlaywrightTimeout:
                                 break
-                            if self.config.delay:
-                                page.wait_for_timeout(int(self.config.delay * 1000))
                         else:
                             next_link = page.locator("ul.pagination li a[aria-label='Next'], ul.pagination li.next a")
                             if not next_link.count() or not next_link.first.is_enabled():
                                 break
                             before_url = page.url
+                            self.pace()
                             next_link.first.click()
                             page.wait_for_function("old => location.href !== old", before_url, timeout=int(self.config.timeout * 1000))
                             page.locator(".thumbnail").first.wait_for(state="visible", timeout=int(self.config.timeout * 1000))
-                        if self.config.delay:
-                            page.wait_for_timeout(int(self.config.delay * 1000))
                 finally:
                     browser.close()
         except PlaywrightError as exc:
